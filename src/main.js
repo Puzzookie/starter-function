@@ -9,7 +9,7 @@ export default async ({ req, res, log, error }) => {
     .setProject(process.env.APPWRITE_FUNCTION_PROJECT_ID)
     .setKey(req.headers['x-appwrite-key'] ?? '');
 
-log('req.body:', req.body); // This is probably a JSON string
+log('req.body:', JSON.stringify(req.body));
 log('req.headers:', JSON.stringify(req.headers, null, 2));
 log('req.method:', req.method);
 log('req.url:', req.url);
