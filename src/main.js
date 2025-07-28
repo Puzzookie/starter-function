@@ -9,8 +9,9 @@ export default async ({ req, res, log, error }) => {
     .setProject(process.env.APPWRITE_FUNCTION_PROJECT_ID)
     .setKey(req.headers['x-appwrite-key'] ?? '');
 
-  const body = JSON.parse(req);
-  log(body);
+const body = req.body;
+log(body);
+
 // and so on — add any other useful parts individually
 
   
